@@ -1,6 +1,6 @@
 {
   "name": "@dolnpm/react-redux-init-app",
-  "version": "0.1.0-development",
+  "version": "0.1.1-development",
   "description": "Minimal setup for React Redux apps with optional support for Material UI",
   "main": "lib/index.js",
   "module": "es/index.js",
