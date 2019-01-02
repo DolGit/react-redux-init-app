@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter, connectRouter } from 'connected-react-router';
 
 import { middleware, history } from './middleware';
+import agent from './agent';
 
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import BaseRouter from './components/base-router/BaseRouter.js';
@@ -36,5 +37,5 @@ export function InitApp(opts) {
     };
 }
 
-export { initialState, reducers, attachReducers, attachState, combineXhrReducers, BaseRouter, history, PreMounter };
+export { initialState, reducers, attachReducers, attachState, combineXhrReducers, BaseRouter, history, PreMounter, agent };
 export var store;
