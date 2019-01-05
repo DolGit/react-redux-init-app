@@ -19,11 +19,11 @@ export default store => next => action => {
                 store.dispatch({ ...action, type: `${action.type}/fail` });
             }
         },
-    ).catch(err => {
+    ).catch(error => {
         action.error = true;
         action.payload = JSON.parse(error.response.body.response);
         if (!action.skipTracking) {
-            store.dispatch({ ...action, type: `${action.type}/serverError` });
+            store.dispatch({ ...action, type: `${action.type}/error` });
         }
     });
 };

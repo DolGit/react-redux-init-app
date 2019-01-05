@@ -24,11 +24,11 @@ export default (function (store) {
                 if (!action.skipTracking) {
                     store.dispatch(_extends({}, action, { type: action.type + '/fail' }));
                 }
-            }).catch(function (err) {
+            }).catch(function (error) {
                 action.error = true;
                 action.payload = JSON.parse(error.response.body.response);
                 if (!action.skipTracking) {
-                    store.dispatch(_extends({}, action, { type: action.type + '/serverError' }));
+                    store.dispatch(_extends({}, action, { type: action.type + '/error' }));
                 }
             });
         };
