@@ -8,8 +8,8 @@ import { middleware, history } from './middleware';
 import agent from './agent.js';
 
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import BaseRouter from './components/base-router/BaseRouter.jsx';
-import DefaultComponents from './components/default-components/DefaultComponents.jsx';
+import BaseRouter from './components/base-router/BaseRouter.js';
+import DefaultComponents from './components/default-components/DefaultComponents.js';
 
 import PreMounter from './pre-mounter.js';
 
