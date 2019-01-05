@@ -25,12 +25,11 @@ export default (function (store) {
                     store.dispatch(_extends({}, action, { type: action.type + '/fail' }));
                 }
             }).catch(function (err) {
-                console.log('something went wrong');
-                // action.error = true;
-                // action.payload = JSON.parse(error.response.body.response);
-                // if (!action.skipTracking) {
-                //     store.dispatch({ ...action, type: `${action.type}/fail` });
-                // }
+                action.error = true;
+                action.payload = JSON.parse(error.response.body.response);
+                if (!action.skipTracking) {
+                    store.dispatch(_extends({}, action, { type: action.type + '/serverError' }));
+                }
             });
         };
     };

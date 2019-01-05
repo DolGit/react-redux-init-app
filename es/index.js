@@ -5,11 +5,11 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter, connectRouter } from 'connected-react-router';
 
 import { middleware, history } from './middleware';
-import agent from './agent';
+import agent from './agent.js';
 
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import BaseRouter from './components/base-router/BaseRouter.js';
-import DefaultComponents from './components/default-components/DefaultComponents.js';
+import BaseRouter from './components/base-router/BaseRouter.jsx';
+import DefaultComponents from './components/default-components/DefaultComponents.jsx';
 
 import PreMounter from './pre-mounter.js';
 
@@ -17,7 +17,7 @@ import { initialState, reducers, attachReducers, combineXhrReducers, attachState
 
 export function InitApp(opts) {
     var reducer = createReducer(initialState, reducers);
-    store = createStore(connectRouter(history)(reducer), initialState, middleware);
+    store = createStore(connectRouter(history)(reducer), initialState, middleware(opts.logger));
 
     return function (App, props) {
         var app = React.createElement(App, props);

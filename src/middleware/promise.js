@@ -20,11 +20,10 @@ export default store => next => action => {
             }
         },
     ).catch(err => {
-        console.log('something went wrong')
-        // action.error = true;
-        // action.payload = JSON.parse(error.response.body.response);
-        // if (!action.skipTracking) {
-        //     store.dispatch({ ...action, type: `${action.type}/fail` });
-        // }
+        action.error = true;
+        action.payload = JSON.parse(error.response.body.response);
+        if (!action.skipTracking) {
+            store.dispatch({ ...action, type: `${action.type}/serverError` });
+        }
     });
 };
