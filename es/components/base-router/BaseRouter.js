@@ -47,7 +47,7 @@ var BaseRouter = function (_React$Component) {
     BaseRouter.prototype.render = function render() {
         return React.createElement(
             'div',
-            null,
+            { className: this.props.className },
             this.props.children
         );
     };
