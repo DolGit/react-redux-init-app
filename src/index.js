@@ -38,6 +38,8 @@ export function InitApp(opts) {
 
 }
 
+var store = {}
+
 export {
     initialState,
     reducers,
@@ -47,6 +49,6 @@ export {
     BaseRouter,
     history,
     PreMounter,
-    agent
+    agent,
+    store
 }
-export var store

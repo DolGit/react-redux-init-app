@@ -37,5 +37,6 @@ export function InitApp(opts) {
     };
 }
 
-export { initialState, reducers, attachReducers, attachState, combineXhrReducers, BaseRouter, history, PreMounter, agent };
-export var store;
+var store = {};
+
+export { initialState, reducers, attachReducers, attachState, combineXhrReducers, BaseRouter, history, PreMounter, agent, store };
