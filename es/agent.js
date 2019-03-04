@@ -35,7 +35,7 @@ var requests = {
         return setDefaults(superagent.post(url, body));
     },
     fileUpload: function fileUpload(url, body, fileParam, file, progressDispatch) {
-        return setDefaults(superagent.post(url, body).attach(fileParam, file).on('progress', function (event) {
+        return setDefaults(superagent.post(url).field("body", JSON.stringify(body)).attach(fileParam, file).on('progress', function (event) {
             progressDispatch(event.percent);
         }));
     }
