@@ -23,7 +23,7 @@ const requests = {
     put: (url, body) => setDefaults(superagent.put(url, body)),
     post: (url, body) => setDefaults(superagent.post(url, body)),
     fileUpload: (url, body, fileParam, file, progressDispatch) => {
-        return setDefaults(superagent.post(url).attach(fileParam, file).on( 'progress', ( event ) => { progressDispatch(event.percent) }))
+        return setDefaults(superagent.post(url, body).attach(fileParam, file).on( 'progress', ( event ) => { progressDispatch(event.percent) }))
     }
 };
 
