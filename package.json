@@ -1,6 +1,6 @@
 {
   "name": "@dolnpm/react-redux-init-app",
-  "version": "0.1.11-development",
+  "version": "0.1.12-development",
   "description": "Minimal setup for React Redux apps with optional support for Material UI",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -20,7 +20,7 @@
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
-  "dependencies": {
+  "peerDependencies": {
     "connected-react-router": "*",
     "history": "*",
     "prop-types": "*",
