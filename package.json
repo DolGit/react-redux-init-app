@@ -1,6 +1,6 @@
 {
   "name": "@dolnpm/react-redux-init-app",
-  "version": "0.1.10-development",
+  "version": "0.1.11-development",
   "description": "Minimal setup for React Redux apps with optional support for Material UI",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -21,6 +21,27 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "dependencies": {
+    "connected-react-router": "*",
+    "history": "*",
+    "prop-types": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-redux": "*",
+    "react-router-dom": "*",
+    "react-router": "*",
+    "redux": "*",
+    "superagent": "*",
+    "superagent-promise": "*"
+  },
+  "devDependencies": {
+    "nwb": "0.23.x",
+    "semantic-release": "^15.13.2",
+    "travis-deploy-once": "^5.0.11",
+    "babel-core": "^6.0.14",
+    "babel-loader": "^7.1.5",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.5.0",
     "connected-react-router": "^4.5.0",
     "history": "^4.7.2",
     "prop-types": "^15.6.2",
@@ -32,16 +53,6 @@
     "redux": "^4.0.1",
     "superagent": "^4.0.0-beta.5",
     "superagent-promise": "^1.1.0"
-  },
-  "devDependencies": {
-    "nwb": "0.23.x",
-    "semantic-release": "^15.13.2",
-    "travis-deploy-once": "^5.0.11",
-    "babel-core": "^6.0.14",
-    "babel-loader": "^7.1.5",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.5.0"
   },
   "author": "Alex Dollery (DolNpm/DolGit)",
   "homepage": "",
